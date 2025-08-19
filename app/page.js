@@ -83,7 +83,7 @@ export default function App() {
   ].filter(s => !!s.href)), [])
 
   return (
-    <main className="relative overflow-x-clip">
+    <main id="top" className="relative overflow-x-clip">
       {/* Sticky Navbar */}
       <header className="sticky top-0 z-50 border-b bg-background/70 backdrop-blur">
         <div className="container flex h-14 items-center justify-between">
