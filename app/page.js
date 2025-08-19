@@ -214,7 +214,7 @@ export default function App() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.skills?.map((s, i) => (
             <div key={s.name + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 60}ms` }}>
-              <div className="group rounded-lg border bg-card/60 backdrop-blur px-4 py-5 hover:bg-card/80 transition-colors">
+              <div className="group rounded-lg border border-white/10 bg-white/5 backdrop-blur-md px-4 py-5 hover:bg-white/10 transition-colors">
                 <div className="flex items-center justify-between">
                   <p className="font-medium">{s.name}</p>
                   <span className="text-xs text-muted-foreground">{s.level}%</span>
