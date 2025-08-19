@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { portfolio } from '@/lib/portfolio.config'
 import { ArrowRight, Github, Linkedin, Mail, Phone, Twitter, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
