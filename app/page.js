@@ -188,6 +188,22 @@ export default function App() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-border/50 to-transparent" />
               <div className="absolute inset-1 rounded-2xl bg-card/60 backdrop-blur border border-border" />
               <div className="absolute inset-0 -z-10" aria-hidden>
+                {/* Orbit rings */}
+                <svg className="absolute inset-0 h-full w-full" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.25" stroke="#ffffff" strokeWidth="0.6" fill="none">
+                    <circle cx="300" cy="300" r="220" />
+                    <circle cx="300" cy="300" r="260" />
+                    <circle cx="300" cy="300" r="300" />
+                  </g>
+                  {/* Sparkles */}
+                  <g>
+                    {[...Array(16)].map((_,i) => (
+                      <circle key={i} cx={300 + Math.cos(i)* (180 + (i%3)*20)} cy={300 + Math.sin(i)* (180 + (i%3)*20)} r="1.2" fill="#fff" opacity="0.6">
+                        <animate attributeName="opacity" values="0.2;0.8;0.2" dur={`${4 + (i%5)}s`} repeatCount="indefinite"/>
+                      </circle>
+                    ))}
+                  </g>
+                </svg>
                 {/* Morphing blob + colorful SVG */}
                 <svg className="h-full w-full" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <defs>
