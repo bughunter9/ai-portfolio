@@ -149,6 +149,19 @@ export default function App() {
         </div>
 
         <div className="container relative z-10 grid gap-8 md:grid-cols-12 items-center">
+          {/* Super-light grid overlay mask */}
+          <div aria-hidden className="pointer-events-none absolute -z-10 inset-0">
+            <div className="h-full w-full [mask-image:radial-gradient(circle_at_center,black_30%,transparent_70%)] opacity-[0.06]">
+              <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                {[...Array(40)].map((_,i) => (
+                  <line key={`v-${i}`} x1={i*40} y1="0" x2={i*40} y2="100%" stroke="currentColor" strokeWidth="0.5" className="text-white" />
+                ))}
+                {[...Array(20)].map((_,i) => (
+                  <line key={`h-${i}`} x1="0" y1={i*40} x2="100%" y2={i*40} stroke="currentColor" strokeWidth="0.5" className="text-white" />
+                ))}
+              </svg>
+            </div>
+          </div>
           <div className="md:col-span-7" data-reveal>
             <p className="text-sm uppercase tracking-widest text-muted-foreground">{portfolio.meta.title}</p>
             <h1 className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
