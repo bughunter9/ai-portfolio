@@ -11,6 +11,13 @@ function useParallaxAndReveal() {
   const listenersRef = useRef([])
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduceMotion) {
+      const revealItems = document.querySelectorAll('[data-reveal]')
+      revealItems.forEach((el) => el.classList.add('opacity-100', 'translate-y-0'))
+      return
+    }
+
     const handleScroll = () => {
       cancelAnimationFrame(rafRef.current)
       rafRef.current = requestAnimationFrame(() => {
