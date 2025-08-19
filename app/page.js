@@ -232,18 +232,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Floating skill chips with micro‑parallax */}
-        <div className="pointer-events-none select-none" aria-hidden>
-          {floatingChips.map((chip, idx) => (
-            <div key={idx} data-parallax={chipPositions[idx]?.speed || 0.06}
-              className="absolute left-0 top-0">
-              <div style={{ position: 'absolute', top: chipPositions[idx]?.top, left: chipPositions[idx]?.left, right: chipPositions[idx]?.right }}
-                   className="rounded-full border border-white/10 bg-white/10 backdrop-blur-md px-3 py-1 text-xs text-white/90 shadow-sm">
-                {chip?.name}
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* Scroll cue */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
