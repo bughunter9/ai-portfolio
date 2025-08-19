@@ -142,23 +142,23 @@ export default function App() {
       </section>
 
       {/* Skills */}
-      &lt;Section id="skills" title="Skills"&gt;
-        &lt;div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"&gt;
-          {portfolio.skills?.map((s, i) =&gt; (
-            &lt;div key={s.name + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 60}ms` }}&gt;
-              &lt;div className="group rounded-lg border bg-card/60 backdrop-blur px-4 py-5 hover:bg-card/80 transition-colors"&gt;
-                &lt;div className="flex items-center justify-between"&gt;
-                  &lt;p className="font-medium"&gt;{s.name}&lt;/p&gt;
-                  &lt;span className="text-xs text-muted-foreground"&gt;{s.level}%&lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div className="mt-3 h-2 w-full rounded-full bg-muted"&gt;
-                  &lt;div className="h-2 rounded-full bg-primary" style={{ width: `${s.level}%` }} /&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+      <Section id="skills" title="Skills">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {portfolio.skills?.map((s, i) => (
+            <div key={s.name + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 60}ms` }}>
+              <div className="group rounded-lg border bg-card/60 backdrop-blur px-4 py-5 hover:bg-card/80 transition-colors">
+                <div className="flex items-center justify-between">
+                  <p className="font-medium">{s.name}</p>
+                  <span className="text-xs text-muted-foreground">{s.level}%</span>
+                </div>
+                <div className="mt-3 h-2 w-full rounded-full bg-muted">
+                  <div className="h-2 rounded-full bg-primary" style={{ width: `${s.level}%` }} />
+                </div>
+              </div>
+            </div>
           ))}
-        &lt;/div&gt;
-      &lt;/Section&gt;
+        </div>
+      </Section>
 
       {/* Experience */}
       &lt;Section id="experience" title="Experience"&gt;
