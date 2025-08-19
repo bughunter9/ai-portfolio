@@ -36,16 +36,13 @@ async function handleRoute(request, { params }) {
   const method = request.method
 
   try {
-    const db = await connectToMongo()
+    // Root endpoint - GET /api/root and GET /api/
+    if ((route === '/root' || route === '/') &amp;&amp; method === 'GET') {
+      return handleCORS(NextResponse.json({ message: "Hello World" }))
+    }
 
-    // Root endpoint - GET /api/root (since /api/ is not accessible with catch-all)
-    if (route === '/root' &amp;&amp; method === 'GET') {
-      return handleCORS(NextResponse.json({ message: "Hello World" }))
-    }
-    // Root endpoint - GET /api/root (since /api/ is not accessible with catch-all)
-    if (route === '/' &amp;&amp; method === 'GET') {
-      return handleCORS(NextResponse.json({ message: "Hello World" }))
-    }
+    // Only connect to Mongo for endpoints that need DB
+    const db = await connectToMongo()
 
     // Status endpoints - POST /api/status
     if (route === '/status' &amp;&amp; method === 'POST') {
