@@ -39,16 +39,16 @@ async function handleRoute(request, { params }) {
     const db = await connectToMongo()
 
     // Root endpoint - GET /api/root (since /api/ is not accessible with catch-all)
-    if (route === '/root' && method === 'GET') {
+    if (route === '/root' &amp;&amp; method === 'GET') {
       return handleCORS(NextResponse.json({ message: "Hello World" }))
     }
     // Root endpoint - GET /api/root (since /api/ is not accessible with catch-all)
-    if (route === '/' && method === 'GET') {
+    if (route === '/' &amp;&amp; method === 'GET') {
       return handleCORS(NextResponse.json({ message: "Hello World" }))
     }
 
     // Status endpoints - POST /api/status
-    if (route === '/status' && method === 'POST') {
+    if (route === '/status' &amp;&amp; method === 'POST') {
       const body = await request.json()
       
       if (!body.client_name) {
@@ -69,14 +69,14 @@ async function handleRoute(request, { params }) {
     }
 
     // Status endpoints - GET /api/status
-    if (route === '/status' && method === 'GET') {
+    if (route === '/status' &amp;&amp; method === 'GET') {
       const statusChecks = await db.collection('status_checks')
         .find({})
         .limit(1000)
         .toArray()
 
       // Remove MongoDB's _id field from response
-      const cleanedStatusChecks = statusChecks.map(({ _id, ...rest }) => rest)
+      const cleanedStatusChecks = statusChecks.map(({ _id, ...rest }) =&gt; rest)
       
       return handleCORS(NextResponse.json(cleanedStatusChecks))
     }
