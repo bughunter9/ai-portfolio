@@ -27,7 +27,7 @@ function useParallaxAndReveal() {
 
         revealItems.forEach((el) => {
           const rect = el.getBoundingClientRect()
-          if (rect.top &lt; vh * 0.9) {
+          if (rect.top < vh * 0.9) {
             el.classList.add('opacity-100', 'translate-y-0')
           }
         })
