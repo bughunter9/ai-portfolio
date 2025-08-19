@@ -100,46 +100,46 @@ export default function App() {
             </div>
           </div>
 
-          &lt;div className="md:col-span-5" data-reveal&gt;
-            &lt;div className="relative aspect-square w-full max-w-[420px] mx-auto"&gt;
-              &lt;div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-border/50 to-transparent" /&gt;
-              &lt;div className="absolute inset-1 rounded-2xl bg-card/60 backdrop-blur border border-border" /&gt;
-              &lt;div className="absolute inset-0 -z-10" aria-hidden&gt;
+          <div className="md:col-span-5" data-reveal>
+            <div className="relative aspect-square w-full max-w-[420px] mx-auto">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-border/50 to-transparent" />
+              <div className="absolute inset-1 rounded-2xl bg-card/60 backdrop-blur border border-border" />
+              <div className="absolute inset-0 -z-10" aria-hidden>
                 {/* Morphing blob */}
-                &lt;svg className="h-full w-full" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"&gt;
-                  &lt;defs&gt;
-                    &lt;linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"&gt;
-                      &lt;stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.25" /&gt;
-                      &lt;stop offset="100%" stopColor="#a855f7" stopOpacity="0.25" /&gt;
-                    &lt;/linearGradient&gt;
-                  &lt;/defs&gt;
-                  &lt;path&gt;
-                    &lt;animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+                <svg className="h-full w-full" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.25" />
+                      <stop offset="100%" stopColor="#a855f7" stopOpacity="0.25" />
+                    </linearGradient>
+                  </defs>
+                  <path>
+                    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
                       M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z;
                       M300,100 C420,60 520,200 520,300 C520,420 420,520 300,520 C180,520 80,420 80,300 C80,180 180,120 300,100 Z;
                       M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z
-                    " /&gt;
-                  &lt;/path&gt;
-                  &lt;path fill="url(#g1)" opacity="0.6"&gt;
-                    &lt;animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+                    " />
+                  </path>
+                  <path fill="url(#g1)" opacity="0.6">
+                    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
                       M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z;
                       M280,120 C420,80 520,200 520,320 C520,420 420,520 300,520 C180,520 100,440 100,320 C100,200 160,120 280,120 Z;
                       M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z
-                    " /&gt;
-                  &lt;/path&gt;
-                &lt;/svg&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+                    " />
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Scroll cue */}
-        &lt;div className="absolute bottom-6 left-1/2 -translate-x-1/2"&gt;
-          &lt;div className="h-12 w-7 rounded-full border border-border/60 flex items-start justify-center p-1"&gt;
-            &lt;div className="h-2 w-2 rounded-full bg-foreground animate-bounce" /&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+          <div className="h-12 w-7 rounded-full border border-border/60 flex items-start justify-center p-1">
+            <div className="h-2 w-2 rounded-full bg-foreground animate-bounce" />
+          </div>
+        </div>
+      </section>
 
       {/* Skills */}
       &lt;Section id="skills" title="Skills"&gt;
