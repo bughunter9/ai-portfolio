@@ -161,32 +161,32 @@ export default function App() {
       </Section>
 
       {/* Experience */}
-      &lt;Section id="experience" title="Experience"&gt;
-        &lt;div className="grid gap-6"&gt;
-          {portfolio.experience?.map((e, i) =&gt; (
-            &lt;div key={e.company + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 80}ms` }}&gt;
-              &lt;div className="rounded-lg border bg-card/60 backdrop-blur p-5"&gt;
-                &lt;div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"&gt;
-                  &lt;div&gt;
-                    &lt;p className="text-lg font-semibold"&gt;{e.role}&lt;/p&gt;
-                    &lt;p className="text-muted-foreground"&gt;{e.company}&lt;/p&gt;
-                  &lt;/div&gt;
-                  &lt;p className="text-sm text-muted-foreground"&gt;{e.period}&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;p className="mt-3 text-sm text-muted-foreground"&gt;{e.summary}&lt;/p&gt;
-                &lt;ul className="mt-3 grid gap-2 sm:grid-cols-2"&gt;
-                  {e.highlights?.map((h, hi) =&gt; (
-                    &lt;li key={hi} className="text-sm flex items-start gap-2"&gt;
-                      &lt;span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-primary" /&gt;
-                      &lt;span&gt;{h}&lt;/span&gt;
-                    &lt;/li&gt;
+      <Section id="experience" title="Experience">
+        <div className="grid gap-6">
+          {portfolio.experience?.map((e, i) => (
+            <div key={e.company + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 80}ms` }}>
+              <div className="rounded-lg border bg-card/60 backdrop-blur p-5">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div>
+                    <p className="text-lg font-semibold">{e.role}</p>
+                    <p className="text-muted-foreground">{e.company}</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{e.period}</p>
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground">{e.summary}</p>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {e.highlights?.map((h, hi) => (
+                    <li key={hi} className="text-sm flex items-start gap-2">
+                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                      <span>{h}</span>
+                    </li>
                   ))}
-                &lt;/ul&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+                </ul>
+              </div>
+            </div>
           ))}
-        &lt;/div&gt;
-      &lt;/Section&gt;
+        </div>
+      </Section>
 
       {/* Projects */}
       &lt;Section id="projects" title="Projects"&gt;
