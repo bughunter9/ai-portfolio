@@ -134,28 +134,36 @@ export default function App() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-border/50 to-transparent" />
               <div className="absolute inset-1 rounded-2xl bg-card/60 backdrop-blur border border-border" />
               <div className="absolute inset-0 -z-10" aria-hidden>
-                {/* Morphing blob */}
+                {/* Morphing blob + colorful SVG */}
                 <svg className="h-full w-full" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                      <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.25" />
-                      <stop offset="100%" stopColor="#a855f7" stopOpacity="0.25" />
+                      <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.35" />
+                      <stop offset="50%" stopColor="#a855f7" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="#f97316" stopOpacity="0.35" />
                     </linearGradient>
+                    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" stopOpacity="0.18" />
+                      <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                    </radialGradient>
                   </defs>
-                  <path>
-                    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
-                      M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z;
-                      M300,100 C420,60 520,200 520,300 C520,420 420,520 300,520 C180,520 80,420 80,300 C80,180 180,120 300,100 Z;
-                      M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z
-                    " />
-                  </path>
-                  <path fill="url(#g1)" opacity="0.6">
-                    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
-                      M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z;
-                      M280,120 C420,80 520,200 520,320 C520,420 420,520 300,520 C180,520 100,440 100,320 C100,200 160,120 280,120 Z;
-                      M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z
-                    " />
-                  </path>
+                  <g filter="url(#f0)">
+                    <path>
+                      <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+                        M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z;
+                        M300,120 C420,80 540,200 520,320 C520,420 440,520 300,520 C160,520 80,420 100,300 C100,200 180,120 300,120 Z;
+                        M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z
+                      " />
+                    </path>
+                    <path fill="url(#g1)" opacity="0.8">
+                      <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+                        M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z;
+                        M280,120 C420,80 520,200 520,320 C520,420 420,520 300,520 C180,520 100,440 100,320 C100,200 160,120 280,120 Z;
+                        M300,80 C380,80 500,160 500,300 C500,420 420,520 300,520 C160,520 100,420 100,300 C100,160 220,80 300,80 Z
+                      " />
+                    </path>
+                  </g>
+                  <circle cx="300" cy="300" r="180" fill="url(#glow)" />
                 </svg>
               </div>
             </div>
