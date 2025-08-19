@@ -59,46 +59,46 @@ const Section = ({ id, title, children }) => {
 export default function App() {
   useParallaxAndReveal()
 
-  const social = useMemo(() =&gt; ([
+  const social = useMemo(() => ([
     { href: portfolio.contact.github, label: 'GitHub', icon: Github },
     { href: portfolio.contact.linkedin, label: 'LinkedIn', icon: Linkedin },
     { href: portfolio.contact.twitter, label: 'Twitter', icon: Twitter },
     { href: `mailto:${portfolio.contact.email}`, label: 'Email', icon: Mail },
     { href: `tel:${portfolio.contact.phone}`, label: 'Phone', icon: Phone },
-  ].filter(s =&gt; !!s.href)), [])
+  ].filter(s => !!s.href)), [])
 
   return (
-    &lt;main className="relative overflow-x-clip"&gt;
+    <main className="relative overflow-x-clip">
       {/* Hero */}
-      &lt;section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center"&gt;
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center">
         {/* Background effects */}
-        &lt;div aria-hidden className="pointer-events-none absolute inset-0 opacity-40"&gt;
-          &lt;div data-parallax="0.12" className="absolute -top-32 -left-32 h-80 w-80 rounded-full blur-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent" /&gt;
-          &lt;div data-parallax="0.18" className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full blur-3xl bg-gradient-to-tr from-purple-500/20 via-fuchsia-400/10 to-transparent" /&gt;
-          &lt;div data-parallax="0.08" className="absolute top-1/3 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full blur-3xl bg-gradient-to-br from-cyan-400/10 to-transparent" /&gt;
-        &lt;/div&gt;
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40">
+          <div data-parallax="0.12" className="absolute -top-32 -left-32 h-80 w-80 rounded-full blur-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent" />
+          <div data-parallax="0.18" className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full blur-3xl bg-gradient-to-tr from-purple-500/20 via-fuchsia-400/10 to-transparent" />
+          <div data-parallax="0.08" className="absolute top-1/3 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full blur-3xl bg-gradient-to-br from-cyan-400/10 to-transparent" />
+        </div>
 
-        &lt;div className="container relative z-10 grid gap-8 md:grid-cols-12 items-center"&gt;
-          &lt;div className="md:col-span-7" data-reveal&gt;
-            &lt;p className="text-sm uppercase tracking-widest text-muted-foreground"&gt;{portfolio.meta.title}&lt;/p&gt;
-            &lt;h1 className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"&gt;
+        <div className="container relative z-10 grid gap-8 md:grid-cols-12 items-center">
+          <div className="md:col-span-7" data-reveal>
+            <p className="text-sm uppercase tracking-widest text-muted-foreground">{portfolio.meta.title}</p>
+            <h1 className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
               {portfolio.meta.name}
-            &lt;/h1&gt;
-            &lt;p className="mt-4 text-muted-foreground max-w-xl"&gt;{portfolio.meta.tagline}&lt;/p&gt;
+            </h1>
+            <p className="mt-4 text-muted-foreground max-w-xl">{portfolio.meta.tagline}</p>
 
-            &lt;div className="mt-6 flex flex-wrap items-center gap-3"&gt;
-              {social.map((s) =&gt; {
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              {social.map((s) => {
                 const Icon = s.icon
                 return (
-                  &lt;Link key={s.label} href={s.href || '#'} target="_blank" className="group inline-flex items-center gap-2 rounded-md border border-border bg-card/50 px-3 py-2 text-sm hover:bg-card transition-colors"&gt;
-                    &lt;Icon className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" /&gt;
-                    &lt;span&gt;{s.label}&lt;/span&gt;
-                    &lt;ArrowRight className="h-3 w-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /&gt;
-                  &lt;/Link&gt;
+                  <Link key={s.label} href={s.href || '#'} target="_blank" className="group inline-flex items-center gap-2 rounded-md border border-border bg-card/50 px-3 py-2 text-sm hover:bg-card transition-colors">
+                    <Icon className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                    <span>{s.label}</span>
+                    <ArrowRight className="h-3 w-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </Link>
                 )
               })}
-            &lt;/div&gt;
-          &lt;/div&gt;
+            </div>
+          </div>
 
           &lt;div className="md:col-span-5" data-reveal&gt;
             &lt;div className="relative aspect-square w-full max-w-[420px] mx-auto"&gt;
