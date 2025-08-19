@@ -189,31 +189,31 @@ export default function App() {
       </Section>
 
       {/* Projects */}
-      &lt;Section id="projects" title="Projects"&gt;
-        &lt;div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"&gt;
-          {portfolio.projects?.map((p, i) =&gt; (
-            &lt;div key={p.name + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 90}ms` }}&gt;
-              &lt;div className="group relative overflow-hidden rounded-lg border bg-card/60 backdrop-blur"&gt;
-                &lt;div className="p-5"&gt;
-                  &lt;h3 className="text-lg font-semibold"&gt;{p.name}&lt;/h3&gt;
-                  &lt;p className="mt-2 text-sm text-muted-foreground"&gt;{p.description}&lt;/p&gt;
-                  &lt;div className="mt-3 flex flex-wrap gap-2"&gt;
-                    {p.tech?.map((t, ti) =&gt; (
-                      &lt;span key={ti} className="rounded-md border border-border/60 bg-secondary/20 px-2 py-1 text-xs text-muted-foreground"&gt;{t}&lt;/span&gt;
+      <Section id="projects" title="Projects">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {portfolio.projects?.map((p, i) => (
+            <div key={p.name + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 90}ms` }}>
+              <div className="group relative overflow-hidden rounded-lg border bg-card/60 backdrop-blur">
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold">{p.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {p.tech?.map((t, ti) => (
+                      <span key={ti} className="rounded-md border border-border/60 bg-secondary/20 px-2 py-1 text-xs text-muted-foreground">{t}</span>
                     ))}
-                  &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div className="flex items-center justify-between px-5 pb-5"&gt;
-                  &lt;Link href={p.link || '#'} target="_blank" className="inline-flex items-center gap-2 text-sm text-primary hover:underline"&gt;
-                    View Project &lt;ExternalLink className="h-4 w-4" /&gt;
-                  &lt;/Link&gt;
-                &lt;/div&gt;
-                &lt;div aria-hidden className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-gradient-to-tr from-primary/20 to-purple-500/20 blur-2xl transition-transform duration-500 group-hover:translate-y-4" /&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+                  </div>
+                </div>
+                <div className="flex items-center justify-between px-5 pb-5">
+                  <Link href={p.link || '#'} target="_blank" className="inline-flex items-center gap-2 text-sm text-primary hover:underline">
+                    View Project <ExternalLink className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div aria-hidden className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-gradient-to-tr from-primary/20 to-purple-500/20 blur-2xl transition-transform duration-500 group-hover:translate-y-4" />
+              </div>
+            </div>
           ))}
-        &lt;/div&gt;
-      &lt;/Section&gt;
+        </div>
+      </Section>
 
       {/* Education */}
       &lt;Section id="education" title="Education"&gt;
