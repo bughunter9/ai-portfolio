@@ -107,6 +107,28 @@ export default function App() {
           <a href={`mailto:${portfolio.contact.email}`} className="text-sm rounded-md border bg-card/60 px-3 py-1.5 hover:bg-card transition-colors">Let’s talk</a>
         </div>
       </header>
+
+      {/* Mobile Sheet */}
+      {open && (
+        <div className="md:hidden fixed inset-0 z-40">
+          <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
+          <div className="absolute right-0 top-0 h-full w-64 border-l bg-background p-5 shadow-xl">
+            <div className="flex items-center justify-between">
+              <span className="font-semibold">Menu</span>
+              <button onClick={() => setOpen(false)} className="h-8 w-8 inline-flex items-center justify-center rounded-md border bg-card/60 hover:bg-card">✕</button>
+            </div>
+            <nav className="mt-6 grid gap-4">
+              <a href="#skills" onClick={() => setOpen(false)} className="text-sm">Skills</a>
+              <a href="#experience" onClick={() => setOpen(false)} className="text-sm">Experience</a>
+              <a href="#projects" onClick={() => setOpen(false)} className="text-sm">Projects</a>
+              <a href="#education" onClick={() => setOpen(false)} className="text-sm">Education</a>
+              <a href="#contact" onClick={() => setOpen(false)} className="text-sm">Contact</a>
+            </nav>
+            <a href={`mailto:${portfolio.contact.email}`} className="mt-6 inline-flex rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card">Let’s talk</a>
+          </div>
+        </div>
+      )}
+
       {/* Hero */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center">
         {/* Background effects */}
