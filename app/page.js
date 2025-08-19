@@ -83,15 +83,7 @@ export default function App() {
     { href: `tel:${portfolio.contact.phone}`, label: 'Phone', icon: Phone },
   ].filter(s => !!s.href)), [])
 
-  const floatingChips = useMemo(() => portfolio.skills?.slice(0,6) || [], [])
-  const chipPositions = useMemo(() => ([
-    { top: '12%', left: '8%', speed: 0.06 },
-    { top: '18%', right: '6%', speed: 0.08 },
-    { top: '40%', left: '5%', speed: 0.07 },
-    { top: '62%', right: '12%', speed: 0.05 },
-    { top: '70%', left: '18%', speed: 0.09 },
-    { top: '30%', right: '20%', speed: 0.06 },
-  ]), [])
+
 
   return (
     <main id="top" className="relative overflow-x-clip">
