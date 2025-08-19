@@ -63,6 +63,14 @@ const Section = ({ id, title, children }) => {
   )
 }
 
+const NavLink = ({ href, children }) => {
+  return (
+    <a href={href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+      {children}
+    </a>
+  )
+}
+
 export default function App() {
   useParallaxAndReveal()
 
