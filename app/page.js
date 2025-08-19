@@ -216,53 +216,53 @@ export default function App() {
       </Section>
 
       {/* Education */}
-      &lt;Section id="education" title="Education"&gt;
-        &lt;div className="grid gap-4 sm:grid-cols-2"&gt;
+      <Section id="education" title="Education"&gt;
+        <div className="grid gap-4 sm:grid-cols-2"&gt;
           {portfolio.education?.map((ed, i) =&gt; (
-            &lt;div key={ed.school + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 70}ms` }}&gt;
-              &lt;div className="rounded-lg border bg-card/60 backdrop-blur p-5"&gt;
-                &lt;p className="text-lg font-semibold"&gt;{ed.school}&lt;/p&gt;
-                &lt;p className="text-sm text-muted-foreground"&gt;{ed.degree}&lt;/p&gt;
-                &lt;p className="text-xs text-muted-foreground mt-1"&gt;{ed.period}&lt;/p&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+            <div key={ed.school + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 70}ms` }}&gt;
+              <div className="rounded-lg border bg-card/60 backdrop-blur p-5"&gt;
+                <p className="text-lg font-semibold"&gt;{ed.school}</p&gt;
+                <p className="text-sm text-muted-foreground"&gt;{ed.degree}</p&gt;
+                <p className="text-xs text-muted-foreground mt-1"&gt;{ed.period}</p&gt;
+              </div&gt;
+            </div&gt;
           ))}
-        &lt;/div&gt;
-      &lt;/Section&gt;
+        </div&gt;
+      </Section&gt;
 
       {/* Contact */}
-      &lt;Section id="contact" title="Contact"&gt;
-        &lt;div className="grid gap-6 md:grid-cols-2"&gt;
-          &lt;div data-reveal className="opacity-0 translate-y-6 transition-all duration-700"&gt;
-            &lt;p className="text-muted-foreground"&gt;
+      <Section id="contact" title="Contact"&gt;
+        <div className="grid gap-6 md:grid-cols-2"&gt;
+          <div data-reveal className="opacity-0 translate-y-6 transition-all duration-700"&gt;
+            <p className="text-muted-foreground"&gt;
               I’m open to interesting freelance and full‑time opportunities. Reach me via email or phone, or read my thoughts on Medium.
-            &lt;/p&gt;
-            &lt;div className="mt-5 flex flex-wrap items-center gap-3"&gt;
-              &lt;Link href={`mailto:${portfolio.contact.email}`} className="rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card transition-colors inline-flex items-center gap-2"&gt;
-                &lt;Mail className="h-4 w-4" /&gt; {portfolio.contact.email}
-              &lt;/Link&gt;
-              &lt;Link href={`tel:${portfolio.contact.phone}`} className="rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card transition-colors inline-flex items-center gap-2"&gt;
-                &lt;Phone className="h-4 w-4" /&gt; {portfolio.contact.phone}
-              &lt;/Link&gt;
-              &lt;Link href={portfolio.contact.medium} target="_blank" className="rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card transition-colors inline-flex items-center gap-2"&gt;
-                Medium &lt;ExternalLink className="h-4 w-4" /&gt;
-              &lt;/Link&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+            </p&gt;
+            <div className="mt-5 flex flex-wrap items-center gap-3"&gt;
+              <Link href={`mailto:${portfolio.contact.email}`} className="rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card transition-colors inline-flex items-center gap-2"&gt;
+                <Mail className="h-4 w-4" /&gt; {portfolio.contact.email}
+              </Link&gt;
+              <Link href={`tel:${portfolio.contact.phone}`} className="rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card transition-colors inline-flex items-center gap-2"&gt;
+                <Phone className="h-4 w-4" /&gt; {portfolio.contact.phone}
+              </Link&gt;
+              <Link href={portfolio.contact.medium} target="_blank" className="rounded-md border bg-card/60 px-3 py-2 text-sm hover:bg-card transition-colors inline-flex items-center gap-2"&gt;
+                Medium <ExternalLink className="h-4 w-4" /&gt;
+              </Link&gt;
+            </div&gt;
+          </div&gt;
 
-          &lt;div className="relative" aria-hidden&gt;
-            &lt;div data-parallax="0.1" className="absolute -top-10 right-10 h-40 w-40 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 blur-2xl" /&gt;
-            &lt;div className="aspect-video rounded-xl border bg-card/50 backdrop-blur" /&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/Section&gt;
+          <div className="relative" aria-hidden&gt;
+            <div data-parallax="0.1" className="absolute -top-10 right-10 h-40 w-40 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 blur-2xl" /&gt;
+            <div className="aspect-video rounded-xl border bg-card/50 backdrop-blur" /&gt;
+          </div&gt;
+        </div&gt;
+      </Section&gt;
 
       {/* Footer */}
-      &lt;footer className="pb-12"&gt;
-        &lt;div className="container text-center text-xs text-muted-foreground"&gt;
+      <footer className="pb-12"&gt;
+        <div className="container text-center text-xs text-muted-foreground"&gt;
           © {new Date().getFullYear()} {portfolio.meta.name}. Built with Next.js and Tailwind.
-        &lt;/div&gt;
-      &lt;/footer&gt;
-    &lt;/main&gt;
+        </div&gt;
+      </footer&gt;
+    </main&gt;
   )
 }
