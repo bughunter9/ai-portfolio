@@ -12,8 +12,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import Achievement from "./../../Portfolio/src/containers/achievement/Achievement";
 
 // Lightweight parallax and reveal engine
 function useParallaxAndReveal() {

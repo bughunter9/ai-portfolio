@@ -1,9 +1,9 @@
-import './globals.css'
+import "./globals.css";
 
 export const metadata = {
-  title: 'Portfolio | Full‑Stack Developer',
-  description: 'Dark, performant, single‑page portfolio built with Next.js and Tailwind',
-}
+  title: "Manroop Singh | Portfolio",
+  description: "SPA portfolio built with Next.js and Tailwind",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -21,5 +21,5 @@ export default function RootLayout({ children }) {
         {children}
       </body>
     </html>
-  )
+  );
 }
