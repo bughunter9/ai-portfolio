@@ -293,7 +293,7 @@ export default function App() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.projects?.map((p, i) => (
             <div key={p.name + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 90}ms` }}>
-              <div className="group relative overflow-hidden rounded-lg border bg-card/60 backdrop-blur">
+              <div className="group relative overflow-hidden rounded-lg border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-colors">
                 <div className="p-5">
                   <h3 className="text-lg font-semibold">{p.name}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
