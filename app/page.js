@@ -161,7 +161,11 @@ export default function App() {
                 {portfolio.meta.name}
               </span>
             </h1>
-            <p className="mt-4 text-muted-foreground max-w-xl">{portfolio.meta.tagline}</p>
+            <p className="mt-4 max-w-xl text-muted-foreground">
+              <span className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+                {portfolio.meta.tagline}
+              </span>
+            </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
               {social.map((s) => {
