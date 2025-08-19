@@ -88,7 +88,15 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b bg-background/70 backdrop-blur">
         <div className="container flex h-14 items-center justify-between">
           <a href="#top" className="font-semibold tracking-tight">{portfolio.meta.name}</a>
-          <nav className="hidden md:flex items-center gap-6">
+          <button onClick={() => setOpen((v) => !v)} className="md:hidden inline-flex h-8 w-8 items-center justify-center rounded-md border bg-card/60 hover:bg-card" aria-label="Toggle Menu">
+  <span className="sr-only">Toggle Menu</span>
+  <div className="relative h-3.5 w-4">
+    <span className="absolute inset-x-0 top-0 h-0.5 bg-foreground transition-all" style={{ transform: open ? 'translateY(6px) rotate(45deg)' : 'translateY(0) rotate(0)' }} />
+    <span className="absolute inset-x-0 top-1/2 h-0.5 bg-foreground transition-opacity" style={{ opacity: open ? 0 : 1, transform: 'translateY(-50%)' }} />
+    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-foreground transition-all" style={{ transform: open ? 'translateY(-6px) rotate(-45deg)' : 'translateY(0) rotate(0)' }} />
+  </div>
+</button>
+<nav className="hidden md:flex items-center gap-6">
             <NavLink href="#skills">Skills</NavLink>
             <NavLink href="#experience">Experience</NavLink>
             <NavLink href="#projects">Projects</NavLink>
