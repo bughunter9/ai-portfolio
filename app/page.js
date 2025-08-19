@@ -44,15 +44,15 @@ function useParallaxAndReveal() {
   }, [])
 }
 
-const Section = ({ id, title, children }) =&gt; {
+const Section = ({ id, title, children }) => {
   return (
-    &lt;section id={id} className="container py-20 sm:py-28"&gt;
-      &lt;div className="mb-10 flex items-end justify-between"&gt;
-        &lt;h2 className="text-2xl sm:text-3xl font-semibold tracking-tight"&gt;{title}&lt;/h2&gt;
-        &lt;div className="h-px w-1/2 bg-gradient-to-r from-primary/50 to-transparent" /&gt;
-      &lt;/div&gt;
+    <section id={id} className="container py-20 sm:py-28">
+      <div className="mb-10 flex items-end justify-between">
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">{title}</h2>
+        <div className="h-px w-1/2 bg-gradient-to-r from-primary/50 to-transparent" />
+      </div>
       {children}
-    &lt;/section&gt;
+    </section>
   )
 }
 
