@@ -84,6 +84,20 @@ export default function App() {
 
   return (
     <main className="relative overflow-x-clip">
+      {/* Sticky Navbar */}
+      <header className="sticky top-0 z-50 border-b bg-background/70 backdrop-blur">
+        <div className="container flex h-14 items-center justify-between">
+          <a href="#top" className="font-semibold tracking-tight">{portfolio.meta.name}</a>
+          <nav className="hidden md:flex items-center gap-6">
+            <NavLink href="#skills">Skills</NavLink>
+            <NavLink href="#experience">Experience</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
+            <NavLink href="#education">Education</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+          </nav>
+          <a href={`mailto:${portfolio.contact.email}`} className="text-sm rounded-md border bg-card/60 px-3 py-1.5 hover:bg-card transition-colors">Let’s talk</a>
+        </div>
+      </header>
       {/* Hero */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center">
         {/* Background effects */}
