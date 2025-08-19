@@ -56,7 +56,7 @@ const Section = ({ id, title, children }) => {
     <section id={id} className="container py-20 sm:py-28 scroll-mt-24">
       <div className="mb-10 flex items-end justify-between">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">{title}</h2>
-        <div className="h-px w-1/2 bg-gradient-to-r from-primary/50 to-transparent" />
+        <div className="h-px w-1/2 bg-gradient-to-r from-cyan-400/50 via-fuchsia-400/40 to-orange-400/0" />
       </div>
       {children}
     </section>
