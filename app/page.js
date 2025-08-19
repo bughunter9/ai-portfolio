@@ -233,7 +233,7 @@ export default function App() {
         <div className="grid gap-6">
           {portfolio.experience?.map((e, i) => (
             <div key={e.company + i} data-reveal className="opacity-0 translate-y-6 transition-all duration-700" style={{ transitionDelay: `${i * 80}ms` }}>
-              <div className="rounded-lg border bg-card/60 backdrop-blur p-5">
+              <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-md p-5">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <div>
                     <p className="text-lg font-semibold">{e.role}</p>
