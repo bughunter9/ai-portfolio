@@ -256,6 +256,38 @@ export default function App() {
         </div>
       </Section>
 
+      {/* Achievements & Certifications */}
+      <Section id="achievements" title="Achievements & Certifications">
+        <div className="grid gap-5 md:grid-cols-2">
+          <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-md p-5" data-reveal>
+            <p className="font-semibold">Achievements</p>
+            <ul className="mt-3 grid gap-2">
+              {portfolio.achievements?.map((a, i) => (
+                <li key={i} className="text-sm flex items-start gap-2">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                  <a href={a.link || '#'} target="_blank" className="hover:underline">
+                    {a.title} <span className="text-muted-foreground">— {a.by} ({a.year})</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-lg border border-white/10 bg-white/5 backdrop-blur-md p-5" data-reveal>
+            <p className="font-semibold">Certifications</p>
+            <ul className="mt-3 grid gap-2">
+              {portfolio.certifications?.map((c, i) => (
+                <li key={i} className="text-sm flex items-start gap-2">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                  <a href={c.link || '#'} target="_blank" className="hover:underline">
+                    {c.name} <span className="text-muted-foreground">— {c.issuedBy} ({c.year})</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
       {/* Projects */}
       <Section id="projects" title="Projects">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
