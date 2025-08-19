@@ -1,5 +1,4 @@
 import './globals.css'
-import { ThemeProvider } from 'next-themes'
 
 export const metadata = {
   title: 'Portfolio | Full‑Stack Developer',
@@ -8,11 +7,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body className="bg-background text-foreground antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )
