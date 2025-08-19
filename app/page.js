@@ -156,8 +156,10 @@ export default function App() {
           </div>
           <div className="md:col-span-7" data-reveal>
             <p className="text-sm uppercase tracking-widest text-muted-foreground">{portfolio.meta.title}</p>
-            <h1 className="mt-2 text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-              {portfolio.meta.name}
+            <h1 className="mt-2 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-orange-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.25)]">
+                {portfolio.meta.name}
+              </span>
             </h1>
             <p className="mt-4 text-muted-foreground max-w-xl">{portfolio.meta.tagline}</p>
 
