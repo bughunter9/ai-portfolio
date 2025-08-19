@@ -179,6 +179,11 @@ export default function App() {
                 )
               })}
             </div>
+            <div className="mt-4">
+              <Link href={portfolio.meta.resumeUrl || '#'} target="_blank" className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/10 backdrop-blur px-4 py-2 text-sm hover:bg-white/20 transition-colors">
+                See my resume <ExternalLink className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
 
           <div className="md:col-span-5" data-reveal>
